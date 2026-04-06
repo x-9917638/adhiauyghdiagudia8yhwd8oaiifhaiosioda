@@ -43,7 +43,7 @@ int main(int argc, char *argv[]) {
     for (int i = 0; i < len - 1; i++) {
       if (!isspace(buf[i])) {
         words++;
-        while (!isspace(buf[i + 1])) {
+        while (i < len - 1 && !isspace(buf[i + 1])) {
           i++;
         }
       }
